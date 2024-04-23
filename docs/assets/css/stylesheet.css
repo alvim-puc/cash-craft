@@ -325,6 +325,13 @@ dl, ol, ul, pre, blockquote, .table {
 .text-11 {
   font-size: 2.75rem !important;
 }
+
+
+.figma {
+  width: 90%;
+  height: 60vh;
+}
+
 @media (max-width: 992px) {
   .text-11 {
     font-size: calc(1.4rem + 2.1774193548vw)  !important;
