@@ -1,0 +1,26 @@
+{
+  "name": "cash-craft",
+  "version": "0.1.0",
+  "author": "Alvim, Athos, Gabriel, Joao",
+  "description": "Mantenha neste diretório todo o código fonte do projeto.",
+  "license": "CC-BY-4.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1.git"
+  },
+  "homepage": "https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1#readme",
+  "bugs": {
+    "url": "https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1/issues"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "json-server": "^1.0.0-alpha.23"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1"
+  }
+}
