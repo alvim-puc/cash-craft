@@ -3,6 +3,7 @@ const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const Port = process.env.PORT || 3000
@@ -40,7 +41,33 @@ server.post('/login', (req, res) => {
       }
     }
 });
-  
+
+server.post('/enviar_email', (req, res) => {
+    const { email, mensagem } = req.body;
+    
+    const transporter = nodemailer.createTransport({
+	    host: process.env.SMTP_SERVER, //Endereço do servidor SMTP que permite envio sem autenticação
+	    port: process.env.SMTP_PORT, //Porta do servidor SMTP
+	    secure: false //Se o uso de SSL/TLS é necessário
+    });
+
+    const mailOptions = {
+        from: email,
+        to: `${process.env.COD_PPL}@sga.pucminas.br`,
+        subject: 'Novo feedback do site',
+        text: `Mensagem: ${mensagem}`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error(error);
+            res.status(500).send('Ocorreu um erro ao enviar o e-mail.');
+        } else {
+            console.log('E-mail enviado:', info.response);
+            res.status(200).send('E-mail enviado com sucesso!');
+        }
+    });
+});  
 
 server.use(router);
 
