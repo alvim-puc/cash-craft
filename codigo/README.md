@@ -11,7 +11,7 @@ codigo/  (essa pasta aqui)
 │
 ├── index.html
 │
-├── assets/
+├── utils/
 │   ├── css/
 │   │   ├── main.css
 │   │   └── (outros arquivos .css)
