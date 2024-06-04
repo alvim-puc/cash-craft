@@ -1,78 +1,117 @@
-const superagent = require('superagent');
-
-class api {
-    constructor() {
+class Api {
+  constructor() {
     this.base = "http://localhost:3080/api/clientes";
   }
 
   /** CRUD Cliente */
 
   async createClient(body) {
-      try {
-        const response = await superagent
-          .post(this.base)
-          .set({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          })
-          .send(body);
-        return response.statusCode;
-      } catch (err) {
-        console.error(err);
-        throw err;
+    try {
+      const response = await fetch(this.base, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      return response.statusText;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
   }
 
   async readClient(id) {
-      try {
-        const response = await superagent
-          .get(this.base + `/${id}`)
-          .set({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          })
-        return response.body;
-      } catch (err) {
-        console.error(err);
-        throw err;
+    try {
+      const response = await fetch(`${this.base}/${id}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      const data = await response.json();
+      return data;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
   }
 
   async updateClient(id, body) {
-      try {
-        const response = await superagent
-          .put(this.base + `/${id}`)
-          .set({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          })
-          .send(body);
-        return response.statusCode;
-      } catch (err) {
-        console.error(err);
-        throw err;
+    try {
+      const response = await fetch(`${this.base}/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      return response.status;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
   }
 
   async deleteClient(id) {
-      try {
-        const response = await superagent
-          .delete(this.base + `/${id}`)
-          .set({
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          })
-        return response.statusCode;
-      } catch (err) {
-        console.error(err);
-        throw err;
+    try {
+      const response = await fetch(`${this.base}/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
       }
+
+      return response.status;
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
   }
 
+  async getAllClients() {
+    try {
+      const response = await fetch(this.base, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
 
-  /** CRUD Fixos */
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
-  /** CRUD Transações */
+      return response.json();
+    } catch (err) {
+      console.error(err);
+      throw err;
+    }
+  }
 }
 
-export default api;
+export default Api;

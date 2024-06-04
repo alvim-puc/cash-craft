@@ -29,10 +29,31 @@ const middlewares = jsonServer.defaults();
 app.use(cors());
 app.use(middlewares);
 
-app.use(express.static(path.join(__dirname, '/public')));
-
-// Usar o router do JSON Server
+// Usar o router do JSON Server para a API
 app.use('/api', router);
+
+// Servir arquivos estáticos da pasta "public"
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+// Rotas específicas para servir os arquivos HTML
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/login.html'));
+});
+
+app.get('/cadastro', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/cadastro.html'));
+});
+
+// app.get('/dashboard', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public/views/dashboard.html'));
+// });
+
+// app.get('/calculadora-financeira', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public/views/calculadora-financeira.html'));
+// });
+
+
 
 const PORT = 3080;
 app.listen(PORT, () => {
