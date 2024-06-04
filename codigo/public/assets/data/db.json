@@ -1,3 +1,92 @@
 {
-    "clientes": []
+  "clientes": [
+    {
+      "username": "robozinm",
+      "nome": "Bernardo souza Alvim",
+      "email": "2021951426@teiacoltec.org",
+      "senha": "BER@12345678",
+      "salario": "650",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 1
+    },
+    {
+      "username": "robozinm",
+      "nome": "Bernardo souza Alvim",
+      "email": "2021951426@teiacoltec.org",
+      "senha": "BER@12345678",
+      "salario": "650",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 2
+    },
+    {
+      "username": "alvino",
+      "nome": "alvim",
+      "email": "alvin0.lvl@gmail.com",
+      "senha": "ASDASDASD@13213132",
+      "salario": "123412",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 3
+    },
+    {
+      "username": "alvim",
+      "nome": "alvim",
+      "email": "alvim103@gmail.com",
+      "senha": "ASDASDASD@13213132",
+      "salario": "123412",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 4
+    },
+    {
+      "username": "okumura",
+      "nome": "okumura rin",
+      "email": "bgameplay555@gmail.com",
+      "senha": "JAKHAHJKAH@@@18923798213",
+      "salario": "123123",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 5
+    },
+    {
+      "username": "teste1",
+      "nome": "teste",
+      "email": "teste@teste",
+      "senha": "123ASDFG@1",
+      "salario": "1",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 6
+    },
+    {
+      "username": "teste2",
+      "nome": "teste",
+      "email": "teste2@teste",
+      "senha": "ASHFGH@716837",
+      "salario": "2",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 7
+    },
+    {
+      "username": "teste3",
+      "nome": "teste",
+      "email": "teste3@teste",
+      "senha": "123456@ASDC",
+      "salario": "3",
+      "fixos": [],
+      "ganhos": [],
+      "gastos": [],
+      "id": 8
+    }
+  ]
 }
