@@ -88,5 +88,32 @@
       "gastos": [],
       "id": 8
     }
+  ],
+
+  "categorias" : [
+    {
+      "cod": 1,
+      "tipo": "Despesas"
+    },
+    {
+      "cod": 2,
+      "tipo": "Entretenimento"
+    },
+    {
+      "cod": 3,
+      "tipo": "Vestuario"
+    },
+    {
+      "cod": 4,
+      "tipo": "Alimentação"
+    },
+    {
+      "cod": 5,
+      "tipo": "Fixos"
+    },
+    {
+      "cod": 6,
+      "tipo": "Outros"
+    }
   ]
 }
