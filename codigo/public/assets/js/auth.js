@@ -1,6 +1,9 @@
 import Api from '../../services/api.js'
 const api = new Api()
 
+import {Cookie} from '../../services/cookie.js'
+const cookies = new Cookie()
+
 async function login(formData) {
     const clientes = await api.getAllClients()
     const cliente = clientes.find(cliente => cliente.email === formData.credential || cliente.username === formData.credential)
@@ -13,7 +16,7 @@ async function login(formData) {
 }
 
 function logout() {
-    localStorage.removeItem('username')
+    cookies.unsetCookie('username')
     window.location.href = '/'
 }
 
@@ -34,22 +37,20 @@ async function signin(username, name, password, email, budget) {
         "nome": name,
         "email": email,
         "senha": password,
-        "salario": budget,
-        "fixos": [],
-        "lancamentos": []
+        "salario": budget
     }
 
     const status = await api.createClient(body);
 
     if (status === "Created") {
-        localStorage.setItem('username', username)
+        cookies.setCookie('username', username)
         window.location.href = '/dashboard'
     }
     else alert("Erro ao cadastrar usuário")
 }
 
 function isAuthenticated() {
-    return localStorage.getItem('username') !== null
+    return cookies.getCookie('username') !== undefined
 }
 
 
