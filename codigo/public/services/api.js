@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this.base = "http://localhost:3080/api/clientes";
+    this.base = "/api/clientes";
   }
 
   /** CRUD Cliente */
