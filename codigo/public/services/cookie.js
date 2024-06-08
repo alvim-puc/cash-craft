@@ -1,24 +1,45 @@
-const cookie = require('cookie')
-
 export class Cookie {
     setCookie(name, value, options = {}) {
-        const cookieStr = cookie.serialize(name, value, {
-            maxAge: 60 * 60 * 24 * 14, // 2 semanas
-            path: '/',
-            ...options,
-        });
+        let cookieStr = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+
+        if (options.maxAge) {
+            cookieStr += `; max-age=${options.maxAge}`;
+        }
+        
+        if (options.expires) {
+            cookieStr += `; expires=${options.expires.toUTCString()}`;
+        }
+        
+        if (options.path) {
+            cookieStr += `; path=${options.path}`;
+        }
+        
+        if (options.domain) {
+            cookieStr += `; domain=${options.domain}`;
+        }
+        
+        if (options.secure) {
+            cookieStr += `; secure`;
+        }
+        
+        if (options.sameSite) {
+            cookieStr += `; samesite=${options.sameSite}`;
+        }
+
         document.cookie = cookieStr;
     }
     
     unsetCookie(name) {
-        document.cookie = cookie.serialize(name, '', {
-            maxAge: -1,
-            path: '/',
-        });
+        document.cookie = `${encodeURIComponent(name)}=; max-age=-1; path=/`;
     }
     
     getCookie(name) {
-        const cookies = cookie.parse(document.cookie || '');
+        const cookies = document.cookie.split('; ').reduce((acc, cookieStr) => {
+            const [key, val] = cookieStr.split('=');
+            acc[decodeURIComponent(key)] = decodeURIComponent(val);
+            return acc;
+        }, {});
+
         return cookies[name];
     }
 }

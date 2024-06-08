@@ -15,20 +15,21 @@ body {
 }
 
 aside {
-  background-color: #121212;
+  background: linear-gradient(#7946d8, #8a45ee);
   color: #fff;
   padding: 100px 40px;
   text-align: center;
 }
 
 aside h1 {
-  color: #9B78FF;
+  /* color: #9B78FF; */
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 main {
   margin: auto;
+  animation: fadeIn 1s ease-in-out;
 }
 
 main form {
@@ -58,7 +59,7 @@ main form input:focus {
 
 main form button {
   padding: 10px 20px;
-  background-color: #121212;
+  background: linear-gradient(#7946d8, #8a45ee);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -68,62 +69,26 @@ main form button {
 }
 
 main form button:hover {
-  color: #9B78FF;
+  color: goldenrod;
   scale: calc(1.08);
   -webkit-transition: 300ms;
 }
 
 main p a {
   text-decoration: none;
-  color: #9B78FF;
+  color: #8a45ee;
 }
 main p a:hover {
   text-decoration: none;
-  color: #611DF1;
+  color: #682fbd3b;
 }
 
-/*fadeInLeft*/
-@-webkit-keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-    }
-  }
    
-  @keyframes fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-   
-  /*fadeOutLeft*/
-  @-webkit-keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-      -webkit-transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      -webkit-transform: translateX(-20px);
-    }
+  100% {
+    opacity: 1;
   }
-   
-  @keyframes fadeOutLeft {
-    0% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-  }
+}

@@ -4,20 +4,21 @@ const api = new Api()
 import {Cookie} from '../../services/cookie.js'
 const cookies = new Cookie()
 
-async function login(formData) {
+async function login(credential, password) {
     const clientes = await api.getAllClients()
-    const cliente = clientes.find(cliente => cliente.email === formData.credential || cliente.username === formData.credential)
+    const cliente = clientes.find(cliente => cliente.email === credential || cliente.username === credential)
     if(!cliente) return alert("Usuário não encontrado")
-    
-    if(cliente.password === formData.password){
-        
+
+    if(cliente.senha === password){
+        cookies.setCookie('username', credential)
+        window.location.href = '/dashboard'
     }
     else return alert("Senha inválida")
 }
 
 function logout() {
     cookies.unsetCookie('username')
-    window.location.href = '/'
+    window.location.href = '/login'
 }
 
 async function signin(username, name, password, email, budget) {
