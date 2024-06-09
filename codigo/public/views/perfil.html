@@ -6,7 +6,8 @@
     <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
-    <title></title>
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <title>Perfil</title>
     <script src="../assets/js/sidebar.js" type="module"></script>
 </head>
 <body>
@@ -62,7 +63,31 @@
         </ul>
     </aside>
     <main>
-        
+        <h2>Seja bem vindo, <span id="user-name"></span></h2>
+        <p>Aqui estão suas informações. Você pode editar elas clicando <button class="btn-link">aqui!</button></p>
+        <form>
+            <div>
+                <label for="name">
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" id="name" class="form-control" disabled>
+                </label>
+                <label for="email">
+                    <i class="bi bi-envelope-fill"></i>
+                    <input type="email" id="email" class="form-control" disabled>
+                </label>
+            </div>
+            <div>
+                <label for="salary">
+                    <i class="bi bi-cash-stack"></i>
+                    <input type="text" id="salary" class="form-control" disabled>
+                </label>
+                <label for="password">
+                    <i class="bi bi-key-fill"></i>
+                    <input type="password" id="password" class="form-control" value="********" disabled>
+                </label>
+            </div>
+        </form>
     </main>
+    <script type="module" src="../assets/js/perfil.js"></script>
 </body>
 </html>

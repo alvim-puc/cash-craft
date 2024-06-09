@@ -10,69 +10,56 @@
     <script src="../assets/js/sidebar.js" type="module"></script>
 </head>
 <body>
-    <div class="wrapper">
-
-        <aside id="sidebar">
-            <div class="d-flex">
-                <button class="toggle-btn" type="button">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="sidebar-logo">
-                    <a href="#">CashCraft</a>
-                </div>
+    <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="/">CashCraft</a>
             </div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-item">
-                    <a href="/perfil" class="sidebar-link">
-                        <i class="bi bi-person"></i>
-                        <span>Perfil</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="/dashboard" class="sidebar-link">
-                        <i class="bi bi-house"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li class="sidebar-item">
-                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth"
-                        aria-expanded="false" aria-controls="auth">
-                        <i class="bi bi-gear-wide-connected"></i>
-                        <span>Manutenção...</span>
-                    </a>
-                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Manutenção...</a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">Manutenção...</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="sidebar-item">
-                    <a href="/calculadora-financeira" class="sidebar-link">
-                        <i class="bi bi-calculator-fill"></i>
-                        <span>Calculadora Financeira</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="sidebar-footer">
-                <a href="#" class="sidebar-link">
+        </div>
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="/perfil" class="sidebar-link">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/dashboard" class="sidebar-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth"
+                    aria-expanded="false" aria-controls="auth">
+                    <i class="bi bi-gear-wide-connected"></i>
+                    <span>Manutenção...</span>
+                </a>
+                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Manutenção...</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link">Manutenção...</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-item">
+                <a href="/calculadora-financeira" class="sidebar-link">
+                    <i class="bi bi-calculator-fill"></i>
+                    <span>Calculadora Financeira</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link" id="logout-btn">
                     <i class="bi bi-box-arrow-right"></i>
                     <span>Logout</span>
                 </a>
-            </div>
-        </aside>
-
-        <main class="main p-3">
-           
-        </main>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
-    <script src="../assets/js/calculadora-financeira.js"></script>
+            </li>
+        </ul>
+    </aside>
 </body>
 </html>

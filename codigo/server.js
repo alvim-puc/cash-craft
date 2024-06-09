@@ -45,13 +45,18 @@ app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/cadastro.html'));
 });
 
-// app.get('/dashboard', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public/views/dashboard.html'));
-// });
 
-// app.get('/calculadora-financeira', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public/views/calculadora-financeira.html'));
-// });
+app.get('/perfil', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/perfil.html'))
+});
+
+app.get('/dashboard', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/dashboard.html'));
+});
+
+app.get('/calculadora-financeira', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/calculadora-financeira.html'));
+});
 
 
 

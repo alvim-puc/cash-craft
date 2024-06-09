@@ -2,16 +2,17 @@ import { logout, isAuthenticated } from './auth.js'
 
 document.addEventListener("DOMContentLoaded", () => {
     hamburguer();
+    hamburguer()
 
     if (!isAuthenticated()) window.location.href = '/login'
 });
 
-function hamburguer() {
+function hamburguer(){
     const hamBurger = document.querySelector(".toggle-btn");
 
-    hamBurger.addEventListener("click", function () {
-        document.querySelector("#sidebar").classList.toggle("expand");
-    });
+    hamBurger.addEventListener("click", () =>
+        document.querySelector("#sidebar").classList.toggle("expand")
+    );
 }
 
 document.getElementById('logout-btn').addEventListener('click', (e) => {

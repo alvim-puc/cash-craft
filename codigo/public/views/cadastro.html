@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/auth.css">
     <title>Registro</title>
@@ -43,12 +44,12 @@
         import { signin } from "../assets/js/auth.js";
         const form = document.getElementById('signupForm');
         form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+            e.preventDefault()
             const username = document.getElementById('username').value
             const name = document.getElementById('name').value
             const password = document.getElementById('password').value
             const email = document.getElementById('email').value
-            const budget = document.getElementById('budget').value
+            const budget = +document.getElementById('budget').value
 
             await signin(username, name, password, email, budget)
             form.reset()
