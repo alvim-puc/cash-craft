@@ -45,6 +45,7 @@ app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/cadastro.html'));
 });
 
+
 app.get('/perfil', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/perfil.html'))
 });

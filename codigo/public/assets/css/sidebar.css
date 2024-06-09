@@ -39,7 +39,6 @@ body {
 #sidebar {
     width: 70px;
     min-width: 70px;
-    height: 100%;
     z-index: 1000;
     transition: all .25s ease-in-out;
     background-color: #130e09;
@@ -142,7 +141,6 @@ a.sidebar-link:hover {
     transition: all .2s ease-out;
 }
 
-/* Estilos existentes para o saldo */
 .balance-block {
     background-color: #fff;
     padding: 1.5rem;
