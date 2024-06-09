@@ -27,9 +27,10 @@ class Api {
     }
   }
 
-  async readClient(id) {
+  async readClient(username) {
+    const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
     try {
-      const response = await fetch(`${this.base}/${id}`, {
+      const response = await fetch(`${this.base}/${cliente.id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

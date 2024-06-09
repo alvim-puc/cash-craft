@@ -29,7 +29,10 @@
         <p>Ainda não tem uma conta? <a href="/cadastro">Cadastre-se</a></p>
     </main>
     <script type="module">
-        import { login } from '../assets/js/auth.js'
+        import { login, isAuthenticated } from '../assets/js/auth.js'
+
+        if(isAuthenticated()) window.location.href = '/dashboard'
+
         const form = document.getElementById('loginForm')
         form.addEventListener('submit', async (e) => {
             e.preventDefault()

@@ -49,7 +49,7 @@
             const name = document.getElementById('name').value
             const password = document.getElementById('password').value
             const email = document.getElementById('email').value
-            const budget = document.getElementById('budget').value
+            const budget = +document.getElementById('budget').value
 
             await signin(username, name, password, email, budget)
             form.reset()

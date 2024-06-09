@@ -5,7 +5,7 @@
       "nome": "Bernardo souza Alvim",
       "email": "2021951426@teiacoltec.org",
       "senha": "BER@12345678",
-      "salario": "650",
+      "salario": 650.00,
       "fixos": [],
       "ganhos": [],
       "gastos": [],
