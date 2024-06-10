@@ -50,31 +50,32 @@ class Api {
     }
   }
 
-  async updateClient(id, body) {
+  async updateClient(body, id) {
     try {
       const response = await fetch(`${this.base}/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(body)
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.status;
+      return response.status
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 
-  async deleteClient(id) {
+  async deleteClient(username) {
+    const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
     try {
-      const response = await fetch(`${this.base}/${id}`, {
+      const response = await fetch(`${this.base}/${cliente.id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
