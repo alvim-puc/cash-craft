@@ -1,5 +1,14 @@
 {
-  "clientes": [],
+  "clientes": [
+    {
+      "username": "alvino",
+      "nome": "Alvim",
+      "email": "alvim@teste.bet",
+      "senha": "Bernardo123!",
+      "salario": 700.5,
+      "id": 1
+    }
+  ],
   "lancamentos": [],
   "categorias": [
     {

@@ -27,7 +27,7 @@ async function signin(username, name, password, email, budget) {
     if(!username || !name || !password || !email || !budget) return alert("Preencha todos os campos")
     if(password.length < 8) return alert("A senha deve ter no mínimo 8 caracteres")
     if(!regex.test(password)) return alert("A senha deve conter pelo menos 1 letra maiúscula, 2 números e 1 caractere especial")
-    if(budget < 0) return alert("O salário não pode ser negativo")
+    if(budget < 0 || isNaN(budget)) return alert("O salário deve ser um número não nulo")
 
     const clientes = await api.getAllClients()
     console.log(clientes)
