@@ -41,13 +41,12 @@ main span {
     text-decoration: none;
 }
 
-.btn-link:focus, .btn-save:focus {
+.btn-link:focus, .btn-save:focus, .btn-delete:focus, .btn-cancel:focus {
     outline: none;
     text-decoration: none;
 }
 
-.btn-save {
-    background-color: #7946d8;
+.btn-save, .btn-delete, .btn-cancel {
     color: #f2f2f2;
     justify-self: end;
     min-width: 30%;
@@ -56,9 +55,36 @@ main span {
     animation: fadeIn 0.7s ease-in-out;
 }
 
+.btn-save {
+    background-color: #7946d8;
+}
+
+.btn-delete {
+    background-color: #D2042D;
+}
+
+.btn-cancel {
+    background-color: #ebe5fa;
+    color: #121212
+}
+
 .btn-save:hover {
     background-color: #8a45ee;
     color: #f2f2f2;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+    color: #f2f2f2;
+    background-color: #77071d;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel:hover {
+    color: #121212;
+    background-color: #ebe5fa;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }

@@ -1,14 +1,5 @@
 {
-  "clientes": [
-    {
-      "username": "robozinm",
-      "nome": "Bernardo souza Alvim",
-      "email": "2021951426@teiacoltec.org",
-      "senha": "BER@12345678",
-      "salario": 550,
-      "id": 1
-    }
-  ],
+  "clientes": [],
   "lancamentos": [],
   "categorias": [
     {
