@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this.base = "/api/clientes";
+    this.base = '/api/clientes'
   }
 
   /** CRUD Cliente */
@@ -14,16 +14,16 @@ class Api {
           'Accept': 'application/json'
         },
         body: JSON.stringify(body)
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.statusText;
+      return response.statusText
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 
@@ -36,39 +36,39 @@ class Api {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
       const data = await response.json();
-      return data;
+      return data
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 
-  async updateClient(id, body) {
+  async updateClient(body, id) {
     try {
       const response = await fetch(`${this.base}/${id}`, {
-        method: 'PUT',
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(body)
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.status;
+      return response.status
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 
@@ -80,16 +80,16 @@ class Api {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
-      });
+      })
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.status;
+      return response.status
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 
@@ -104,15 +104,15 @@ class Api {
       });
 
       if(!response.ok){
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.json();
+      return response.json()
     } catch (err) {
-      console.error(err);
-      throw err;
+      console.error(err)
+      throw err
     }
   }
 }
 
-export default Api;
+export default Api
