@@ -1,7 +1,6 @@
 import { logout, isAuthenticated } from './auth.js'
 
 document.addEventListener("DOMContentLoaded", () => {
-    hamburguer();
     hamburguer()
 
     if (!isAuthenticated()) window.location.href = '/login'

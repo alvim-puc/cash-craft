@@ -149,7 +149,14 @@ main form i {
         font-size: 1.2rem;
     }
 
-    .btn-save {
-        min-width: 100%;
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .actions button {
+        width: 100%;
+        justify-content: center;
     }
 }

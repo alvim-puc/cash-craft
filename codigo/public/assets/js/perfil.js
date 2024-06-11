@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 form.elements['email'].disabled = true
                 form.elements['salary'].disabled = true
                 form.elements['password'].disabled = true
+                form.elements['password'].value = '*******'
 
                 // Habilitar o botão de edição
                 editBtn.disabled = false
@@ -86,11 +87,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             form.addEventListener('submit', async () => {
                 const formData = new FormData(form)
+                const budget = parseFloat(formData.get('salary').replace('$', ''))
+                if(budget < 0 || isNaN(budget)) return alert('Salário deve ser um número não nulo')
 
                 const body = {
                     nome: formData.get('name') || cliente.nome,
                     email: formData.get('email') || cliente.email,
-                    salario: parseFloat(formData.get('salary').replace('$', '')) || cliente.salario
+                    salario: budget || cliente.salario
                 };
 
                 if(cliente.senha !== formData.get('password'))
@@ -111,6 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     form.elements['email'].disabled = true
                     form.elements['salary'].disabled = true
                     form.elements['password'].disabled = true
+                    form.elements['password'].value = '*******'
 
                     // Ativar o botão de edição novamente
                     editBtn.disabled = false
