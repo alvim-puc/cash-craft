@@ -1,3 +1,5 @@
 /** Exporta o server.js */
 
-module.exports = require('../server')
+const server = require('../server.js');
+
+module.exports = server;
