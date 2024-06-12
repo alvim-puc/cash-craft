@@ -1,3 +1,3 @@
 /** Exporta o server.js */
 
-module.exports = require('../server')
+module.exports = require('../server.js')
