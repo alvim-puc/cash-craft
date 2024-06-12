@@ -1,4 +1,11 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/vercel.js",
+      "use": "@vercel/node"
+    }
+  ],
   "functions": {
     "api/vercel.js": {
       "memory": 1024,
