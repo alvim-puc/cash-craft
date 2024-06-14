@@ -36,6 +36,10 @@ app.use('/api', router);
 // Servir arquivos estáticos da pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', (req, res) => {
+res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 
 // Rotas específicas para servir os arquivos HTML
 app.get('/login', (req, res) => {
