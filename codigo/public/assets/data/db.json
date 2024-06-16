@@ -12,28 +12,46 @@
   "lancamentos": [],
   "categorias": [
     {
-      "cod": 1,
+      "id": 1,
       "tipo": "Despesas"
     },
     {
-      "cod": 2,
+      "id": 2,
       "tipo": "Entretenimento"
     },
     {
-      "cod": 3,
+      "id": 3,
       "tipo": "Vestuario"
     },
     {
-      "cod": 4,
+      "id": 4,
       "tipo": "Alimentação"
     },
     {
-      "cod": 5,
+      "id": 5,
       "tipo": "Fixos"
     },
     {
-      "cod": 6,
+      "id": 6,
       "tipo": "Outros"
+    }
+  ],
+  "metodos": [
+    {
+      "id": 1,
+      "tipo": "Dinheiro"
+    },
+    {
+      "id": 2,
+      "tipo": "Débito"
+    },
+    {
+      "id": 3,
+      "tipo": "Crédito"
+    },
+    {
+      "id": 4,
+      "tipo": "Pix"
     }
   ]
 }
