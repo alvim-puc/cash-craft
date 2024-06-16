@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/vercel.js",
+      "use": "@vercel/node",
+      "config": {
+        "memory": 1024,
+        "includeFiles": "public/assets/data/db.json"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api/vercel.js"
+    }
+  ]
+}

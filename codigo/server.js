@@ -23,7 +23,8 @@ const path = require('path');
 /** Adaptado por Bernardo Alvim */
 
 const app = express();
-const router = jsonServer.router('./public/assets/data/db.json');
+const routerPath = path.join(__dirname, 'public', 'assets', 'data', 'db.json');
+const router = jsonServer.router(routerPath);
 const middlewares = jsonServer.defaults();
 
 app.use(cors());
@@ -34,6 +35,10 @@ app.use('/api', router);
 
 // Servir arquivos estáticos da pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 
 // Rotas específicas para servir os arquivos HTML
