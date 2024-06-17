@@ -23,7 +23,8 @@ const path = require('path');
 /** Adaptado por Bernardo Alvim */
 
 const app = express();
-const router = jsonServer.router('./public/assets/data/db.json');
+const routerPath = path.join(__dirname, 'public', 'assets', 'data', 'db.json');
+const router = jsonServer.router(routerPath);
 const middlewares = jsonServer.defaults();
 
 app.use(cors());
@@ -58,6 +59,9 @@ app.get('/calculadora-financeira', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/calculadora-financeira.html'));
 });
 
+app.get('/lancamento', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/lancamento.html'));
+});
 
 
 const PORT = 3080;
