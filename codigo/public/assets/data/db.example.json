@@ -1,19 +1,20 @@
 {
     "clientes": [
         {
-            "username": "alvim",
-            "nome": "bernardo alvim",
-            "email": "alvim103@gmail.com",
-            "senha": "ASDASDASD@13213132",
-            "salario": "123412",
-            "id": 4
+            "username": "alvino",
+            "nome": "Alvim",
+            "email": "alvim@teste.bet",
+            "senha": "Bernardo123!",
+            "salario": 700.5,
+            "id": 1
         }
     ],
     "lancamentos": [
         {
             "clienteId": 4,
             "descricao": "Conta de luz",
-            "categoria": 1,
+            "categoriaId": 1,
+            "metodoId": 2,
             "valor": 170.00,
             "data": "06-06-2024",
             "id": 1
@@ -21,28 +22,46 @@
     ],
     "categorias": [
         {
-            "cod": 1,
+            "id": 1,
             "tipo": "Despesas"
         },
         {
-            "cod": 2,
+            "id": 2,
             "tipo": "Entretenimento"
         },
         {
-            "cod": 3,
+            "id": 3,
             "tipo": "Vestuario"
         },
         {
-            "cod": 4,
+            "id": 4,
             "tipo": "Alimentação"
         },
         {
-            "cod": 5,
+            "id": 5,
             "tipo": "Fixos"
         },
         {
-            "cod": 6,
+            "id": 6,
             "tipo": "Outros"
+        }
+    ],
+    "metodos": [
+        {
+            "id": 1,
+            "tipo": "Dinheiro"
+        },
+        {
+            "id": 2,
+            "tipo": "Débito"
+        },
+        {
+            "id": 3,
+            "tipo": "Crédito"
+        },
+        {
+            "id": 4,
+            "tipo": "Pix"
         }
     ]
 }

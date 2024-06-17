@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "node server.js",
+    "build": "node api/vercel.js", 
     "test": "jest"
   },
   "dependencies": {
