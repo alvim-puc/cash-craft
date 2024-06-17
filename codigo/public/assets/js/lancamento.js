@@ -18,18 +18,17 @@ document.addEventListener('DOMContentLoaded', async () => {
             data: document.getElementById('expense-date').value,
             descricao: document.getElementById('expense-description').value,
             valor: +document.getElementById('expense-amount').value,
-            metodoId: +document.getElementById('expense-method').value,
-            categoriaId: +document.getElementById('expense-category').value
+            categoriaId: +document.getElementById('expense-category').value,
+            metodoId: +document.getElementById('expense-method').value
         }
 
-        console.log(body)
 
-        //const res = await api.createLaunch(data)
-
-        // if (res.status === 201) {
-        //     alert('Transação cadastrada com sucesso!')
-        //     window.location.href = '/dashboard'
-        // }
+        const status = await api.createLaunch(body)
+        if (status === 201) {
+            alert('Transação cadastrada com sucesso!')
+            window.location.reload()
+        }
+        else return alert('Erro ao cadastrar transação: ' + status)
     })
 })
 

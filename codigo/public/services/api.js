@@ -120,6 +120,28 @@ class Api {
 
   /** CRUD Lançamentos */
 
+  async getUserLaunches(username) {
+    const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
+    try {
+      const response = await fetch(`${this.urlClients}/${cliente.id}/lancamentos`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.json()
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
   async createLaunch(body) {
     try {
       const response = await fetch(this.urlLaunches, {
@@ -135,7 +157,7 @@ class Api {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.statusText
+      return response.status
     } catch (err) {
       console.error(err)
       throw err
@@ -158,27 +180,6 @@ class Api {
       }
 
       return response.status
-    } catch (err) {
-      console.error(err)
-      throw err
-    }
-  }
-
-  async getAllLaunches() {
-    try {
-      const response = await fetch(this.urlLaunches, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        }
-      });
-
-      if(!response.ok){
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-
-      return response.json()
     } catch (err) {
       console.error(err)
       throw err
