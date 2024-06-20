@@ -12,8 +12,7 @@
     "url": "https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1/issues"
   },
   "scripts": {
-    "start": "node server.js",
-    "build": "node api/vercel.js", 
+    "start": "node app.js",
     "test": "jest"
   },
   "dependencies": {

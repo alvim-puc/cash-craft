@@ -1,13 +1,14 @@
 class Api {
   constructor() {
-    this.base = '/api/clientes'
+    this.base = ''
+    this.clientesUrl = this.base + '/api/clientes'
   }
 
   /** CRUD Cliente */
 
   async createClient(body) {
     try {
-      const response = await fetch(this.base, {
+      const response = await fetch(this.clientesUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +31,7 @@ class Api {
   async readClient(username) {
     const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
     try {
-      const response = await fetch(`${this.base}/${cliente.id}`, {
+      const response = await fetch(`${this.clientesUrl}/${cliente.id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -52,7 +53,7 @@ class Api {
 
   async updateClient(body, id) {
     try {
-      const response = await fetch(`${this.base}/${id}`, {
+      const response = await fetch(`${this.clientesUrl}/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +75,7 @@ class Api {
 
   async deleteClient(id) {
     try {
-      const response = await fetch(`${this.base}/${id}`, {
+      const response = await fetch(`${this.clientesUrl}/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +96,7 @@ class Api {
 
   async getAllClients() {
     try {
-      const response = await fetch(this.base, {
+      const response = await fetch(this.clientesUrl, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
