@@ -1,7 +1,5 @@
-import config from '../../../config.js';
-
 document.addEventListener('DOMContentLoaded', async () => {
-    const apiKey = config.FMP_API_KEY;
+    const apiKey = '<%= FMP_APY_KEY %>';
     const apiUrl = `https://financialmodelingprep.com/api/v3/stock/actives?apikey=${apiKey}`;
 
     try {
