@@ -23,7 +23,7 @@ class Api {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      return response.statusText
+      return response.status
     } catch (err) {
       console.error(err)
       throw err

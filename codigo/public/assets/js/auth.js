@@ -43,7 +43,7 @@ async function signin(username, name, password, email, budget) {
 
     const status = await api.createClient(body);
 
-    if (status === "Created") {
+    if (status === 201) {
         cookies.setCookie('username', username)
         window.location.href = '/dashboard'
     }

@@ -52,7 +52,7 @@ app.get('/perfil', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(views, 'public/views/dashboard.html'));
+  res.sendFile(path.join(views, '/dashboard.html'));
 });
 
 app.get('/calculadora-financeira', (req, res) => {
