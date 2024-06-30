@@ -278,6 +278,22 @@ const editarLancamento = async (id) => {
     }
 }
 
+const excluirLancamento = async (id) => {
+    const confirmacao = confirm('Tem certeza que deseja excluir este lançamento?')
+    if (confirmacao) {
+        try {
+            const status = await api.deleteLaunch(id)
+            if (status === 200 || status === 204) {
+                window.location.reload()
+            } else {
+                alert('Erro ao excluir o lançamento')
+            }
+        } catch (error) {
+            console.error('Erro ao excluir o lançamento:', error)
+        }
+    }
+}
+
 const deletaCliente = async (id) => {
     const confirmacao = confirm('Tem certeza que deseja deletar o cliente?')
     if (confirmacao) {
