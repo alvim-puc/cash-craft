@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const apiKey = '<%= FMP_APY_KEY %>';
+    const apiKey = '<%= FMP_API_KEY %>';
     const apiUrl = `https://financialmodelingprep.com/api/v3/stock/actives?apikey=${apiKey}`;
 
     try {
