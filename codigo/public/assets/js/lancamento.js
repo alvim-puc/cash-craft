@@ -4,8 +4,6 @@ const api = new Api()
 import { Cookie } from "../../services/cookie.js"
 const cookies = new Cookie()
 
-import './lancamento.utils.js'
-
 document.addEventListener('DOMContentLoaded', async () => {
     const categories = await api.getCategories()
     const methods = await api.getMethods()
