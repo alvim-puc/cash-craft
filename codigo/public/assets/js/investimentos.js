@@ -1,4 +1,4 @@
-import config from '/config.js';
+import config from '../../../config.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     const apiKey = config.FMP_API_KEY;
