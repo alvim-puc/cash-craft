@@ -387,7 +387,7 @@
                 <div class="alert alert-warning collapse" role="alert" id="collapseWireframes">
                   <p>Os Wireframes são protótipos das telas da aplicação usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante ao layout de elementos fundamentais na interface. <img  class="img-fluid" src="assets/images/exemplo-wireframe.png" alt="Exemplo de wireframe"></p>
                 </div>
-                <iframe class="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FkXI20SRWfCtvCH5nkVfFWR%2Fcash-craft%3Fnode-id%3D13-291%26t%3DpWRndXfrNx4nh43T-1" allowfullscreen></iframe>
+                <iframe class="figma" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FkXI20SRWfCtvCH5nkVfFWR%2Fcash-craft%3Fnode-id%3D0-1%26t%3DcgsvSW7nfu04J33E-1" allowfullscreen></iframe>
               </section>
 
             </section>
@@ -509,19 +509,102 @@
                 <p>Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.</p>
               </div>
 
+             
+
               <section>
-                <h5>Funcionalidade 1 - Cadastro de Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema</p>
+                <h5>Funcionalidade 2 - Permitir que o usuário insira seus gastos e suas receitas</h5>
+                <p>Funcionalidade para controlar os gastos e as receitas geradas no mês através de um sistema de formulário e tabela.</p>
                 <ul class="list-unstyled">
-                  <li><strong>Estrutura de dados: </strong><a href="#ti_ed_contatos">Contatos</a></li>
+                  <li><strong>Estrutura de dados: </strong><a href="#lancamentosJson">Lancamentos</a></li>
                   <li><strong>Instruções de acesso: </strong><ul>
                     <li>Abra o site e efetue o login</li>
-                    <li>Acesse o menu principal e escolha a opção Cadastros </li>
-                    <li>Em seguida, escolha a opção Contatos</li>
+                    <li>Acesse o menu registros financeiros</li>
+                    <li>Em seguida, efetue suas transações, Adicione, edite ou exclua um gasto.</li>
                   </ul></li>
                 </ul>
-                <p class="text-center"><img class="img-fluid" src="assets/images/exemplo-funcionalidade.png" alt="Tela Cadastro de Contatos"></p>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF02-IMG.png" alt="Tela de fixos"></p>
               </section>
+
+              <section>
+                <h5>Funcionalidade 3 - Permitir que o usuário dê feedbacks e sugestões sobre o software</h5>
+                <p>A funcionalidade permite que os usuários enviem feedbacks e sugestões. Isso deve inclui um formulário acessível a partir da página principal, com campos para nome, e-mail, assunto. Após o envio, o usuário deve recebe uma confirmação na página, e a equipe pode ver os feedbacks.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#lancamentosJson">Lancamentos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login</li>
+                    <li>Preencher todos os campos de nome, email e mensagem</li>
+                    <li>Clicar em Enviar Mensagem</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF03-IMG.png" alt="Tela de Formulario de Contato"></p>
+              </section>
+
+              <section>
+                <h5>Funcionalidade 4 - Capacidade de registrar e gerenciar contas</h5>
+                <p>Esta funcionalidade permite ver e editar
+                  dados do usuário, como trocar
+                  email, senha, nome, salário.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#clientesJson">Clientes</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login</li>
+                    <li>Vá para a pagina de perfil</li>
+                    <li>Clique em "aqui"</li>
+                    <li>Edite os dados do seu perfil da forma que preferir</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF04-IMG.png" alt="Tela de Formulario de Contato"></p>
+              </section>
+
+
+              <section>
+                <h5>Funcionalidade 5 - Capacidade de gerenciar e depreciar fixos</h5>
+                <p>Esta funcionalidade é fundamental para permitir o controle e a análise dos gastos fixos recorrentes de um usuários, como aluguel, salários, e outros custos regulares. A capacidade de gerenciar esses gastos oferece aos usuários do sistema uma visão clara e detalhada das despesas fixas ao longo do tempo, facilitando o planejamento financeiro e a tomada de decisões</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#lancamentosJson">Lancamentos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login</li>
+                    <li>Vá para a pagina de perfil</li>
+                    <li>Em seguida, efetue as açoes de adicionar, excluir e editar os fixos, cada um com seus respectivos botões</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF05-IMG.png" alt="Tela de fixos"></p>
+              </section>
+
+              <section>
+                <h5>Funcionalidade 6 - Capacidade de esconder/mostrar dados financeiros</h5>
+                <p>A funcionalidade permite o armazenamento persistente do saldo da conta e estado de visibilidade.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#clientesJson">Clientes</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login</li>
+                    <li>Acesse o menu dashboard</li>
+                    <li>Verifique o saldo da sua conta</li>
+                    <li>Clica no icone de "olho" para ocultar seu saldo</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF06-IMG.png" alt="Tela de Formulario de Contato"></p>
+              </section>
+
+
+              <section>
+                <h5>Funcionalidade 8 - Calculadora de financiamento</h5>
+                <p>Esta funcionalidade permite o usuário pode fazer um cálculo de financiamento
+                  para saber o valor das parcelas que o mesmo terá que pagar.
+                  Além disso, haverá dicas para se atentar ao financiar algo,
+                  seja uma casa, um carro, ou um apartamento.</p>
+                <ul class="list-unstyled">
+                  <li><strong>Estrutura de dados: </strong><a href="#lancamentosJson">Lancamentos</a></li>
+                  <li><strong>Instruções de acesso: </strong><ul>
+                    <li>Abra o site e efetue o login</li>
+                    <li>Vá para o menu Calculadora de financiamento</li>
+                    <li>Informe os dados e clique em calcular</li>
+                    <li>Clique no botão dicas</li>
+                  </ul></li>
+                </ul>
+                <p class="text-center"><img class="img-fluid" src="assets/images/RF03-IMG.png" alt="Tela de Formulario de Contato"></p>
+              </section>
+
             </section>
 
             <!-- Estruturas de dados =============== -->
@@ -536,7 +619,7 @@
               </div>
 
               <section>
-                <h5>Estrutura de Dados - Clientes</h5>
+                <h5 id="clientesJson">Estrutura de Dados - Clientes</h5>
                 <p>Clientes json</p>
                 <pre>
                 {
@@ -605,7 +688,7 @@
               </section>
 
               <section>
-                <h5>Estrutura de Dados - Lançamentos</h5>
+                <h5 id="lancamentosJson">Estrutura de Dados - Lançamentos</h5>
                 <p>Lançamentos json</p>
                 <pre>
                 {
