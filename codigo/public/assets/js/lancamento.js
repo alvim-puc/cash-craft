@@ -161,7 +161,7 @@ document.getElementById('expenses-form').addEventListener('submit', async (e) =>
         if (editMode) {
             if(
                 (data.value === '' || description.value === '' || amount.value === '' || !category.value || !method.value) ||
-                (data.value === body.data || description.value === body.descricao || amount.value === body.valor || category.value === body.categoriaId || method.value === body.metodoId)
+                (data.value === body.data && description.value === body.descricao && amount.value === body.valor && category.value === body.categoriaId && method.value === body.metodoId)
             ) return alert('Campos iguais ou vazios')
             status = await api.updateLaunch(body, editId)
         } else {
