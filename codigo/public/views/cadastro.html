@@ -49,7 +49,15 @@
             const name = document.getElementById('name').value
             const password = document.getElementById('password').value
             const email = document.getElementById('email').value
-            const budget = +document.getElementById('budget').value
+            let budget = document.getElementById('budget').value;
+
+            // Substituir vírgulas por pontos e verificar se o valor é um número válido
+            budget = budget.replace(/,/g, '.');
+            if (isNaN(budget) || !budget.match(/^-?\d*\.?\d*$/)) {
+                return alert('Salário não é um número válido');
+            }
+    
+            budget = parseFloat(budget);
 
             await signin(username, name, password, email, budget)
         })
