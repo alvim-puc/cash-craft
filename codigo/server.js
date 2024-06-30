@@ -19,6 +19,7 @@ const express = require('express');
 const jsonServer = require('json-server');
 const cors = require('cors');
 const path = require('path');
+const dotenv = require('dotenv');
 
 /** Adaptado por Bernardo Alvim */
 
@@ -60,6 +61,7 @@ app.get('/calculadora-financeira', (req, res) => {
 });
 
 app.get('/lancamento', (req, res) => {
+  res.render('index', { FMP_API_KEY: process.env.FMP_API_KEY });
   res.sendFile(path.join(views, 'lancamento.html'));
 });
 
