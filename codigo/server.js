@@ -36,35 +36,42 @@ app.use('/api', router);
 // Servir arquivos estáticos da pasta "public"
 app.use(express.static(path.join(__dirname, 'public')));
 
+const views = path.join(__dirname, 'public', 'views');
 
 // Rotas específicas para servir os arquivos HTML
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/login.html'));
+  res.sendFile(path.join(views, 'login.html'));
 });
 
 app.get('/cadastro', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/cadastro.html'));
+  res.sendFile(path.join(views, 'cadastro.html'));
 });
 
 app.get('/perfil', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/perfil.html'))
+  res.sendFile(path.join(views, 'perfil.html'))
 });
 
 app.get('/dashboard', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/dashboard.html'));
+  res.sendFile(path.join(views, 'public/views/dashboard.html'));
 });
 
 app.get('/calculadora-financeira', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/calculadora-financeira.html'));
+  res.sendFile(path.join(views, 'calculadora-financeira.html'));
 });
 
 app.get('/lancamento', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/lancamento.html'));
+  res.sendFile(path.join(views, 'lancamento.html'));
 });
 
 app.get('/investimentos', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/views/investimento.html'));
+  res.sendFile(path.join(views, 'investimento.html'));
 });
+
+// Rota para páginas que não existem (404)
+app.get('*', (req, res) => {
+  res.status(404).sendFile(path.join(views, '404.html'));
+});
+
 
 const PORT = 3080;
 app.listen(PORT, () => {
