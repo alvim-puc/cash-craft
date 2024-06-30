@@ -2,7 +2,7 @@
 
 Esta pasta armazena a documentação do projeto para a disciplina de **Trabalho Interdisciplinar 1** dos cursos de Tecnologia da Informação da **[PUC Minas](https://pucminas.br)**. Essa documentação é estruturada na forma de um site que fica disponível por meio do GitHub Pages e pode ser incluído, também, no site da solução hospedada. Um [exemplo publicado do TIDocs](https://webtech-puc-minas.github.io/ti1-template/) está disponível por meio do repositório do **[WebTech PUC Minas](https://github.com/webtech-pucminas)**.
 
-Link para o TIDocs hospedado: **[Financas-G1/TIDocs](https://icei-puc-minas-pples-ti.github.io/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1/docs/)**
+Link para o TIDocs hospedado: **[Financas-G1/TIDocs](https://icei-puc-minas-pples-ti.github.io/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1/)**
 
 A documentação do projeto inclui as seguintes seções:
 
