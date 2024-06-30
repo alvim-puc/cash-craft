@@ -41,6 +41,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const views = path.join(__dirname, 'public', 'views');
 
+// Rota para pegar a chave de acesso da API FMP
+app.get('/fmpKey', (req, res) => {
+  const apiKey = { key: process.env.FMP_API_KEY };
+  res.json(apiKey);
+});
+
 // Rotas específicas para servir os arquivos HTML
 app.get('/login', (req, res) => {
   res.sendFile(path.join(views, 'login.html'));
@@ -63,7 +69,6 @@ app.get('/calculadora-financeira', (req, res) => {
 });
 
 app.get('/lancamento', (req, res) => {
-  res.render('index', { FMP_API_KEY: process.env.FMP_API_KEY });
   res.sendFile(path.join(views, 'lancamento.html'));
 });
 

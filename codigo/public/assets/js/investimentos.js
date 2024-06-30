@@ -1,17 +1,27 @@
 document.addEventListener('DOMContentLoaded', async () => {
-    const apiKey = '<%= FMP_API_KEY %>';
-    const apiUrl = `https://financialmodelingprep.com/api/v3/stock/actives?apikey=${apiKey}`;
-
     try {
+        const keyResponse = await fetch('/fmpKey');
+        if (!keyResponse.ok) {
+            throw new Error('Erro ao buscar a chave da API');
+        }
+        const keyData = await keyResponse.json();
+        const apiKey = keyData.key;
+
+        // Certifica de que a chave da API é uma string
+        if (typeof apiKey !== 'string') {
+            throw new Error('Chave da API inválida');
+        }
+
+        const apiUrl = `https://financialmodelingprep.com/api/v3/stock/actives?apikey=${apiKey}`;
+
         const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error('Erro ao buscar dados das ações');
         }
         const data = await response.json();
-        console.log(data);
         const top10Stocks = data.mostActiveStock.splice(0, 10);
 
-        // Renderizar informações das ações
+        // Renderiza informações das ações
         renderStocksInfo(top10Stocks);
 
         // Configurações do gráfico
