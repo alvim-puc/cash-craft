@@ -5,7 +5,7 @@
       "nome": "Alvim",
       "email": "alvim@teste.bet",
       "senha": "Bernardo123!",
-      "salario": 700.5,
+      "salario": 750,
       "id": 1
     }
   ],
@@ -41,7 +41,7 @@
       "clienteId": 1,
       "descricao": "Academia",
       "data": "2024-06-28",
-      "valor": -99,
+      "valor": -98,
       "categoriaId": 5,
       "id": 5
     },
@@ -77,6 +77,14 @@
       "categoriaId": 6,
       "metodoId": 4,
       "id": 10
+    },
+    {
+      "clienteId": 1,
+      "descricao": "Van",
+      "data": "2024-06-30",
+      "valor": -150,
+      "categoriaId": 5,
+      "id": 11
     }
   ],
   "categorias": [

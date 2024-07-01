@@ -250,7 +250,7 @@ const editarLancamento = async (id) => {
 
             const formData = new FormData(event.target)
 
-            if(lancamento.descricao === formData.get('descricao-edit') || lancamento.valor === +formData.get('valor-edit'))
+            if(lancamento.descricao === formData.get('descricao-edit') && lancamento.valor === +formData.get('valor-edit'))
                 return closeDialog('dialog-edit-fixos')
 
             lancamento.descricao = formData.get('descricao-edit')
