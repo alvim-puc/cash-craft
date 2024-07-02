@@ -10,7 +10,7 @@ async function login(credential, password) {
     if(!cliente) return alert("Usuário não encontrado")
 
     if(cliente.senha === password){
-        cookies.setCookie('username', credential)
+        cookies.setCookie('username', cliente.username)
         window.location.href = '/dashboard'
     }
     else return alert("Senha inválida")
