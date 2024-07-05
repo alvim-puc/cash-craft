@@ -1,38 +1,97 @@
 # Código Fonte
 
-Mantenha neste diretório todo o código fonte do projeto.
-
-Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código.
-
 Estruturação do CashCraft:
 
 ```plaintext
 codigo/  (essa pasta aqui)
 │
-├── index.html
+├── server.js (script que habilita o DB e rotea as páginas usando express e json-server)
 │
-├── utils/
-│   ├── css/
-│   │   ├── main.css
-│   │   └── (outros arquivos .css)
-│   │
-│   ├── js/
-│   │   ├── app.js
-│   │   └── (outros arquivos .js)
-│   │
-│   ├── images/
-│   │   ├── logo.png
-│   │   └── (outras imagens)
-│   │
-│   └── data/
-│       ├── db.json
-│       └── (outras fontes de datos)
+├── public/
+│   ├── assets/
+│   │   ├── css/ (arquivos de estilização)
+│   |   ├── js/ (scripts relacionados a cada página)
+│   |   ├── images/ (imagens utilizadas nas páginas)
+│   |   └── data/
+│   |        └── db.json (banco de dados do projeto)
+│   ├── services/ (componentes de serviço)
+|   |    ├── api.js (script que faz o controle de requisições no db.json)
+|   |    └── cookies.js (script que manipula os cookies do site)
+|   ├── views/ (páginas do projeto)
+|   └── index.html (homepage do projeto)
 │
-├── pages/
-│   ├── contact.html
-│   └── (outras páginas)
-│
+├── package.json (dependências do projeto)
 └── README.md
 ```
 
-Utilize a pasta pages para manter um arquivo para cada pessoa por artefato (sprints 2 e 3) e, com isso, isolar as alterações de cada pessoa, facilitando o trabalho de gestão do código.
+Estrutura de Dados do CashCraft:
+
+```json
+{
+    "clientes": [
+        {
+            "username": "alvino",
+            "nome": "Alvim",
+            "email": "alvim@teste.bet",
+            "senha": "Bernardo123!",
+            "salario": 700.5,
+            "id": 1
+        }
+    ],
+    "lancamentos": [
+        {
+            "clienteId": 4,
+            "descricao": "Conta de luz",
+            "categoriaId": 1,
+            "metodoId": 2,
+            "valor": 170.00,
+            "data": "06-06-2024",
+            "id": 1
+        }
+    ],
+    "categorias": [
+        {
+            "id": 1,
+            "tipo": "Despesas"
+        },
+        {
+            "id": 2,
+            "tipo": "Entretenimento"
+        },
+        {
+            "id": 3,
+            "tipo": "Vestuario"
+        },
+        {
+            "id": 4,
+            "tipo": "Alimentação"
+        },
+        {
+            "id": 5,
+            "tipo": "Fixos"
+        },
+        {
+            "id": 6,
+            "tipo": "Outros"
+        }
+    ],
+    "metodos": [
+        {
+            "id": 1,
+            "tipo": "Dinheiro"
+        },
+        {
+            "id": 2,
+            "tipo": "Débito"
+        },
+        {
+            "id": 3,
+            "tipo": "Crédito"
+        },
+        {
+            "id": 4,
+            "tipo": "Pix"
+        }
+    ]
+}
+```
